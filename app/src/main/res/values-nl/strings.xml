@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fooienpot</string>
+    <string name="pay_with_android_pay">Betaal met Android Pay</string>
+    <string name="both">Beide</string>
+    <string name="kitchen">Keuken</string>
+    <string name="service">Bediening</string>
+    <string name="comments">Opmerkingen</string>
+    <string name="department">Afdeling</string>
+    <string name="your_tip">Uw fooi</string>
+    <string name="comment">Opmerking :</string>
+    <string name="department2">Afdeling :</string>
+    <string name="pls_select_a_tip_or_department">Selecteer fooi en afdeling!</string>
+    <string name="summary">Samenvatting</string>
+    <string name="tip">Fooi :</string>
+</resources>

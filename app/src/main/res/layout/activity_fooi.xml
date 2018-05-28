@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context="com.example.fhict.fooienpot.FooiActivity">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="0.23"
+            android:scaleType="centerCrop"
+            android:stretchMode="columnWidth"
+            app:srcCompat="@drawable/restaurant1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_tip"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/toggleTipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <ToggleButton
+                android:id="@+id/btnFooi5"
+                android:tag="5"
+                android:onClick="onClickTip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:textOff="€ 5"
+                android:textOn="€ 5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ToggleButton
+                android:id="@+id/btnFooi10"
+                android:layout_width="0dp"
+                android:tag="10"
+                android:onClick="onClickTip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:textOff="€ 10"
+                android:textOn="€ 10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ToggleButton
+                android:id="@+id/btnFooi15"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:tag="15"
+                android:onClick="onClickTip"
+                android:textOff="€ 15"
+                android:textOn="€ 15"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/department"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/toggleDepartmentGroup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <ToggleButton
+                android:id="@+id/btnBediening"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:tag="Service"
+                android:onClick="onClickDepartment"
+                android:textOff="@string/service"
+                android:textOn="@string/service"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ToggleButton
+                android:id="@+id/btnKeuken"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:tag="Kitchen"
+                android:onClick="onClickDepartment"
+                android:textOff="@string/kitchen"
+                android:textOn="@string/kitchen"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ToggleButton
+                android:id="@+id/btnBeide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:tag="Both"
+                android:onClick="onClickDepartment"
+                android:textOff="@string/both"
+                android:textOn="@string/both"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comments"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/textComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.23"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:background="@drawable/border"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLength="150"
+            android:maxLines="3"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnBetaal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onClickPay"
+        android:layout_alignParentBottom="true"
+        android:text="@string/pay_with_android_pay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>
+
+
+
+
